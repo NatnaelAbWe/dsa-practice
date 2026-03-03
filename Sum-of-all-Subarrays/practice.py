@@ -11,7 +11,7 @@ Output: 50
 Explanation: Sum of all possible subarrays of the array [1, 2, 3, 4] is 50.'''
 
 # Native Approch
-# time complexity O(n)^2 and space complexity O(n)
+# time complexity O(n)^2 and space complexity O(1)
 
 def sumAllArr(arr):
 
@@ -27,6 +27,21 @@ def sumAllArr(arr):
 
     return result
 
+
+# [Expected Approach] Element Contribution Method - O(n) Time and O(1) Space
+
+def sum_array(arr):
+    n = len(arr)
+
+    sum = 0
+
+    for i in range(n):
+        sum += (arr[i] * (i+1) * (n-i))
+
+    return sum
+
 if __name__ == "__main__":
-    arr = [1, 4, 5, 3, 2,8]
+    arr = [1, 2,3]
     print(sumAllArr(arr))
+    print(sum_array(arr))
+
