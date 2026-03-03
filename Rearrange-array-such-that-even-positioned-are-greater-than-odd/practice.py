@@ -40,9 +40,7 @@ def rearrangeArr(arr):
             pt1 += 1
     return res
 
-arr = [1, 2, 2, 1]
-res = rearrangeArr(arr)
-print(res)
+
 
 '''[Approach 2] - Rearranging array by swapping elements
 '''
@@ -62,6 +60,10 @@ def swampArr(arr):
     return arr
 
 if __name__ == "__main__":
+
+    arr = [1, 2, 2, 1]
+    res = rearrangeArr(arr)
+    print(res)
     inputArr = [1,2,2,1,5.6]
     resultArr = swampArr(inputArr)
     print(resultArr)
