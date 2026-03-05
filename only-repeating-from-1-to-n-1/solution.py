@@ -27,3 +27,14 @@ if __name__ == "__main__":
     arr = [1, 3, 2, 3, 4]
     print(search_duplicate(arr))
 
+# [Better Approach 1] Sorting - O(n Log n) Time and O(1) Space
+
+def find_duplicate(arr):
+    arr.sort()
+
+    for i in range(len(arr)):
+        if arr[i] == arr[i+1]:
+            return arr[i]
+    return -1
+
+find_duplicate(arr)
